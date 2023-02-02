@@ -46,7 +46,7 @@ public class Calculytor {
         number1 = romanToNumber(stable00);
         number2 = romanToNumber(string03);
         if (number1 < 0 && number2 < 0) {
-            result = 0;
+            throw new NumberFormatException("не корректные данные, вводить можно положительные числа");
         } else {
             result = calculated(number1, number2, operation);
             System.out.println("---Результат для римских цифр----");
