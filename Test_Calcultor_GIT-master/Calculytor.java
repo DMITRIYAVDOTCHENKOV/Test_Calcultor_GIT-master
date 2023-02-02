@@ -45,16 +45,14 @@ public class Calculytor {
         String string03 = stable01.trim();
         number1 = romanToNumber(stable00);
         number2 = romanToNumber(string03);
-
-            if (number1 < 0 && number2 < 0) {
-                throw new NumberFormatException("не корректные данные, вводить можно положительные числа");
-            } else {
-                result = calculated(number1, number2, operation);
-                System.out.println("---Результат для римских цифр----");
-                String resultRoman = RomaNumbers.convertNumToRoman(result);
-                System.out.println(stable00 + " " + operation + " " + string03 + " = " + resultRoman);
-            }
-
+        if (number1 < 0 && number2 < 0) {
+            throw new NumberFormatException("не корректные данные, вводить можно положительные числа");
+        } else {
+            result = calculated(number1, number2, operation);
+            System.out.println("---Результат для римских цифр----");
+            String resultRoman = RomaNumbers.convertNumToRoman(result);
+            System.out.println(stable00 + " " + operation + " " + string03 + " = " + resultRoman);
+        }
         number1 = Integer.parseInt(stable00);
         number2 = Integer.parseInt(string03);
         result = calculated(number1, number2, operation);
