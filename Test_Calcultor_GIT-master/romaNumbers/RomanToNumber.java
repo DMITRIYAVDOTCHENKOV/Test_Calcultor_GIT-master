@@ -5,37 +5,26 @@ import java.util.InputMismatchException;
 public class RomanToNumber {
     public static int romanToNumber (String roman) {
         try {
-            switch (roman) {
-                case "I" -> {
-                    return 1;
-                }
-                case "II" -> {
-                    return 2;
-                }
-                case "III" -> {
-                    return 3;
-                }
-                case "IV" -> {
-                    return 4;
-                }
-                case "V" -> {
-                    return 5;
-                }
-                case "VI" -> {
-                    return 6;
-                }
-                case "VII" -> {
-                    return 7;
-                }
-                case "VIII" -> {
-                    return 8;
-                }
-                case "IX" -> {
-                    return 9;
-                }
-                case "X" -> {
-                    return 10;
-                }
+            if (roman.equals("I")) {
+                return 1;
+            } else if (roman.equals("II")) {
+                return 2;
+            } else if (roman.equals("III")) {
+                return 3;
+            } else if (roman.equals("IV")) {
+                return 4;
+            } else if (roman.equals("V")) {
+                return 5;
+            } else if (roman.equals("VI")) {
+                return 6;
+            } else if (roman.equals("VII")) {
+                return 7;
+            } else if (roman.equals("VIII")) {
+                return 8;
+            } else if (roman.equals("IX")) {
+                return 9;
+            } else if (roman.equals("X")) {
+                return 10;
             }
         } catch (InputMismatchException e) {
             throw new InputMismatchException("Неверный формат данных");
